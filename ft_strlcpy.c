@@ -1,23 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: terjimen <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: terjimen <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 21:59:47 by terjimen          #+#    #+#             */
-/*   Updated: 2023/09/25 22:10:58 by terjimen         ###   ########.fr       */
+/*   Created: 2023/10/17 23:34:04 by terjimen          #+#    #+#             */
+/*   Updated: 2023/10/17 23:37:34 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_bzero(void *s, size_t n)
+size_t	strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((char *)s)[i] = 0;
-		i++;
-	}
 }
+

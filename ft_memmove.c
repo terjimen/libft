@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: terjimen <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: terjimen <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 21:59:47 by terjimen          #+#    #+#             */
-/*   Updated: 2023/09/25 22:10:58 by terjimen         ###   ########.fr       */
+/*   Created: 2023/10/17 22:55:51 by terjimen          #+#    #+#             */
+/*   Updated: 2023/10/17 23:33:29 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_bzero(void *s, size_t n)
+void	*memmove(void *dst, const void *src, size_t len)
 {
+	char	*s;
+	char	*d;
 	size_t	i;
 
+	s = (char *)src;
+	d = (char *)dst;
 	i = 0;
-	while (i < n)
-	{
-		((char *)s)[i] = 0;
-		i++;
-	}
+	if (d > s)
+		while (len-- > 0)
+			d[len] = s[len];
+	else
+		while (i < len)
+			d[i] = s[i];
+	i++;
+	return (dst);
 }
