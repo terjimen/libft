@@ -6,9 +6,11 @@
 /*   By: terjimen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:53:56 by terjimen          #+#    #+#             */
-/*   Updated: 2023/09/25 20:48:11 by terjimen         ###   ########.fr       */
+/*   Updated: 2023/10/20 22:30:19 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -18,3 +20,13 @@ int	ft_isalpha(int c)
 	}
 	return (0);
 }
+/*
+int	main(void)
+{
+	char	c;
+
+	c = 'f';
+	printf("%d\n", ft_isalpha(c));
+	return (0);
+}
+*/
