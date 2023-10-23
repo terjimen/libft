@@ -6,21 +6,48 @@
 /*   By: terjimen <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 22:54:14 by terjimen          #+#    #+#             */
-/*   Updated: 2023/10/22 00:08:33 by terjimen         ###   ########.fr       */
+/*   Updated: 2023/10/23 14:38:35 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
+	size_t	dst_len;
+	size_t	src_len;
 	size_t	i;
-	size_t	srclcpy;
 
-	srclen = ft_strlen(src);
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	i = 0;
+	if (size < dst_len + 1)
+		return (size + src_len);
+	if (size > dst_len + 1)
+	{
+		while (src[i] != '\0' && dst_len + 1 + i < size)
+		{
+			dst[dst_len + i] = src[i];
+			i++;
+		}
+	}
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }
-
-int main(void)
+/*
+int	main(void)
 {
+	char dst[20] = "Hello, ";
+	char *src = "world!";
+	size_t size = sizeof(dst);
 
+	size_t result = ft_strlcat(dst, src, dstsize);
+
+	printf("String original: %s\n", src);
+	printf("String de destino: %s\n", dst);
+	printf("Strings concatenadas en la de destino: %s\n", dst);
+	printf("Longuitud de la concatenada final: %zu\n", result);
+
+    return 0;
 }
+*/

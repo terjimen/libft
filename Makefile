@@ -8,6 +8,8 @@ SOURCES = \
 	ft_strlen.c \
 	ft_strlcpy.c \
 	ft_strlcat.c \
+	ft_strchr.c \
+	ft_strrchr.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 
