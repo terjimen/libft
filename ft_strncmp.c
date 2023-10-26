@@ -1,45 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: terjimen <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 14:52:14 by terjimen          #+#    #+#             */
-/*   Updated: 2023/10/23 22:59:29 by terjimen         ###   ########.fr       */
+/*   Created: 2023/10/23 23:00:49 by terjimen          #+#    #+#             */
+/*   Updated: 2023/10/25 12:30:05 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
-	i = ft_strlen(s);
-	while (i > 0)
-	{
-		if (s[i] == (char)c)
-			return ((char *)s + i);
-		i--;
-	}
-	if (s[i] == (char)c)
-		return ((char *)s + i);
-	return (NULL);
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (s1[i] != '\0' && s1[i] == s2[i] && i < n - 1)
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 /*
 int	main(void)
 {
-	const char	*str = "Hola amigo";
-	int	find = 'o';
+	const char *s1 = "Hola";
+	const char *s2 = "Hole";
+	int comp = ft_strncmp(s1, s2, 4);
 
-	char *locate = ft_strrchr(str, find);
-
-	if (locate)
-		printf("El caracter '%c' ESTA en la string en 
-esta posicion %ld.\n", find, locate-str);
+	if (comp < 0)
+		printf("s1 es menor que s2.\n");
+	else if (comp> 0)
+		printf("s1 es mayor que s2\n");
 	else
-		printf("El caracter '%c' NO ESTA en la string.\n", find);
+		printf("las strings son iguales.\n");
+
 	return (0);
 }
 */
