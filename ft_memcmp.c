@@ -1,45 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: terjimen <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 14:52:14 by terjimen          #+#    #+#             */
-/*   Updated: 2023/10/28 23:25:23 by terjimen         ###   ########.fr       */
+/*   Created: 2023/11/05 22:02:37 by terjimen          #+#    #+#             */
+/*   Updated: 2023/11/05 22:36:19 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	const unsigned char	*p1;
+	const unsigned char	*p2;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	while (i >= 0)
+	p1 = (const unsigned char *)s1;
+	p2 = (const unsigned char *)s2;
+	while (n-- > 0)
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i--;
+		if (*p1 != *p2)
+			return (*p1 - *p2);
+		p1++;
+		p2++;
 	}
-	return (NULL);
+	return (0);
 }
 /*
 int	main(void)
 {
-	const char	*str = "Hola amigo";
-	int	find = 'o';
 
-	char *locate = ft_strrchr(str, find);
-
-	if (locate)
-		printf("El caracter '%c' ESTA en la string en 
-esta posicion %ld.\n", find, locate-str);
-	else
-		printf("El caracter '%c' NO ESTA en la string.\n", find);
-	return (0);
 }
 */

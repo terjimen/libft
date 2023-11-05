@@ -1,45 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: terjimen <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 14:52:14 by terjimen          #+#    #+#             */
-/*   Updated: 2023/10/28 23:25:23 by terjimen         ###   ########.fr       */
+/*   Created: 2023/11/05 22:32:32 by terjimen          #+#    #+#             */
+/*   Updated: 2023/11/05 22:43:50 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	unsigned char	*f;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	while (i >= 0)
+	f = (unsigned char *)s;
+	while (n--)
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i--;
+		*f = 0;
+		f++;
 	}
-	return (NULL);
 }
 /*
 int	main(void)
 {
-	const char	*str = "Hola amigo";
-	int	find = 'o';
 
-	char *locate = ft_strrchr(str, find);
-
-	if (locate)
-		printf("El caracter '%c' ESTA en la string en 
-esta posicion %ld.\n", find, locate-str);
-	else
-		printf("El caracter '%c' NO ESTA en la string.\n", find);
-	return (0);
 }
 */
