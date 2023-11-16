@@ -1,48 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: terjimen <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/27 13:33:05 by terjimen          #+#    #+#             */
-/*   Updated: 2023/11/16 14:13:52 by terjimen         ###   ########.fr       */
+/*   Created: 2023/11/08 19:29:20 by terjimen          #+#    #+#             */
+/*   Updated: 2023/11/08 20:03:42 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strdup(const char *s1)
 {
-	char		*d;
-	const char	*s;
+	size_t	i;
+	char	*s2;
 
-	d = dst;
-	s = src;
-	if (d < s)
-		while (len--)
-			*d++ = *s++;
-	else if (d > s)
+	i = 0;
+	s2 = (char *) malloc(ft_strlen(s1) + 1 * sizeof(char));
+	if (s2 == NULL)
+		return (NULL);
+	while (s1[i])
 	{
-		d += len;
-		s += len;
-		while (len--)
-			*(--d) = *(--s);
+		s2[i] = s1[i];
+		i++;
 	}
-	return (dst);
+	s2[i] = '\0';
+	return (s2);
 }
 /*
-int main(void)
+int	main(void)
 {
-	char 	arrayd[] = "holaamigo";
-	char 	arrays[] = "bye";
+	const char *og = "Hola amigo";
 
-	void		*ptr;
+	char *cp = strdup(og);
 
-	ptr = &arrayd[0];
-	ft_memmove(arrayd, arrays, 3);
-   	printf("arrayd: %s\n", arrayd);
-   	printf("ptr: %s", (char *)ptr);
+	if (cp != NULL)
+	{
+		printf("OG: %s\n", og);
+		printf("CP: %s\n", cp);
+
+	free(cp);
+	}
+	else
+		printf("ERROR.\n");
+
 	return(0);
 }
 */
