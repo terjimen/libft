@@ -6,7 +6,7 @@
 /*   By: terjimen <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 17:56:19 by terjimen          #+#    #+#             */
-/*   Updated: 2023/11/16 13:23:42 by terjimen         ###   ########.fr       */
+/*   Updated: 2023/11/16 15:02:15 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,10 +103,10 @@ char	**ft_split(char const *s, char c)
 	fin = spl_copy(s, fin, c);
 	return (fin);
 }
-/*int main() 
+/*
+int main() 
 {
 	int i = 0;
-	int j = 0;
 	char c = ' ';
 	char *s = "hola pedazo de maquina";
 	char **split = ft_split(s, c);
@@ -123,4 +123,5 @@ char	**ft_split(char const *s, char c)
     free(split);
 
     return 0;
-}*/
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: terjimen <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 13:33:05 by terjimen          #+#    #+#             */
-/*   Updated: 2023/11/16 14:13:52 by terjimen         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:53:52 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main(void)
 	ptr = &arrayd[0];
 	ft_memmove(arrayd, arrays, 3);
    	printf("arrayd: %s\n", arrayd);
-   	printf("ptr: %s", (char *)ptr);
+   	printf("ptr: %s\n", (char *)ptr);
 	return(0);
 }
 */

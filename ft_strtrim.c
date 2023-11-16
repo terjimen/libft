@@ -6,7 +6,7 @@
 /*   By: terjimen <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:54:40 by terjimen          #+#    #+#             */
-/*   Updated: 2023/11/10 17:41:56 by terjimen         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:57:29 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,5 @@ int	main(void)
 		printf("Error al recortar la cadena.\n");
 	}
 
-}*/
+}
+*/
