@@ -6,7 +6,7 @@
 /*   By: terjimen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:53:56 by terjimen          #+#    #+#             */
-/*   Updated: 2023/11/16 14:53:19 by terjimen         ###   ########.fr       */
+/*   Updated: 2023/11/20 22:31:23 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,11 @@ int	main(void)
 	char	c;
 
 	c = 'f';
-	printf("%d\n", ft_isalpha(c));
+	if (ft_isalpha(c)) {
+		printf("%c es un carácter alfabético. \n", c);
+	else 
+		printf("%c no es un carácter alfabético. \n", c);
+
 	return (0);
 }
 */
