@@ -6,7 +6,7 @@
 /*   By: terjimen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 20:35:20 by terjimen          #+#    #+#             */
-/*   Updated: 2023/10/20 23:22:03 by terjimen         ###   ########.fr       */
+/*   Updated: 2023/11/21 13:47:20 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	main(void)
 	char	c;
 
 	c = '~';
-	printf("%d\n", ft_isprint(c));
+	if (ft_isprint(c)) {
+		printf("%c es printeable. \n", c);
+	} else {
+		printf("%c no es printeable. \n", c);
 	return (0);
 }
 */

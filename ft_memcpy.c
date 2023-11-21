@@ -6,7 +6,7 @@
 /*   By: terjimen <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 23:29:13 by terjimen          #+#    #+#             */
-/*   Updated: 2023/11/05 21:33:03 by terjimen         ###   ########.fr       */
+/*   Updated: 2023/11/21 13:56:59 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 /*
 int	main(void)
 {
-	char	src[] = "Hola amigo";
+	char	src[] = "Hola";
 	char	dst[14];
 
-	ft_memcpy(dst, src, 3);
-	printf("String copiada: %s\n", dst);
+	ft_memcpy(dst, src, ft_strlen(src) + 1);
+	printf("String final: %s\n", dst);
 	
 	return (0);
 }

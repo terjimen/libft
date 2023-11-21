@@ -6,7 +6,7 @@
 /*   By: terjimen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 20:11:14 by terjimen          #+#    #+#             */
-/*   Updated: 2023/10/20 22:45:40 by terjimen         ###   ########.fr       */
+/*   Updated: 2023/11/21 13:39:55 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,13 @@ int	main(void)
 	char	c;
 
 	c = '5';
-	printf("%d\n", ft_isdigit(c));
+	if (isdigit(c)) {
+		printf("%c es un dígito.\n", c);
+	} else {
+		printf("%c no es un dígito.\n", ci);
+	}
+
 	return (0);
+}	
 }
 */
