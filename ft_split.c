@@ -6,7 +6,7 @@
 /*   By: terjimen <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 17:56:19 by terjimen          #+#    #+#             */
-/*   Updated: 2023/11/16 15:02:15 by terjimen         ###   ########.fr       */
+/*   Updated: 2023/11/21 15:31:57 by terjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,13 +82,13 @@ static char	**spl_copy(const char *s, char **fin, char c)
 				i++;
 			fin[j] = cp_c(s, st, i);
 			if (!fin[j])
-				go_free(fin, 0, j);
+				return ((go_free(fin, 0, j)), NULL);
 			j++;
+			fin[j] = NULL;
 			st = -1;
 		}
 	}
-	fin[j] = NULL;
-	return (fin);
+	return ((fin[j] = NULL), fin);
 }
 
 char	**ft_split(char const *s, char c)
@@ -108,7 +108,7 @@ int main()
 {
 	int i = 0;
 	char c = ' ';
-	char *s = "hola pedazo de maquina";
+	char *s = "hola crack";
 	char **split = ft_split(s, c);
 	while (split[i] != NULL)
 	{
